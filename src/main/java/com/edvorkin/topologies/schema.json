@@ -1,0 +1,66 @@
+{
+    "schema": [
+        {
+            "collection": "cp.events",
+            "fields": {
+                "_id": "varchar(32)",
+
+                "uid": "varchar(32)",
+
+                "activityId": "varchar(500)",
+                "activityName": "varchar(64)",
+                "url": "varchar(2000)",
+                "appName": "varchar(200)",
+                "date": "datetime",
+                "yearmonth": "varchar(6)",
+                "tacticId": "integer",
+                "parId": "varchar(32)",
+                "impr": [
+                    {
+                        "tcid": "integer",
+                        "pos": "varchar(100)",
+                        "ver": "varchar(100)",
+                        "exp": "integer"
+                    }
+                ]
+            }
+        },
+        {
+            "collection": "cp.tlc",
+            "fields": {
+                "_id": "varchar(32)",
+                "_class": "varchar(60)",
+                "uid": "varchar(32)",
+                "tacticId": "Integer",
+                "active": "BOOLEAN",
+                "date": "varchar(40)",
+                "dismissalReason": "varchar(100)",
+                "assigned": {
+                    "date": "datetime",
+                    "eventId": "varchar(32)",
+                    "lSourceId": "integer",
+                    "activityId": "integer",
+                    "rule": {
+                        "_id": "integer",
+                        "stageRule": "Varchar(2000)",
+                        "liveRule": "varchar(2000)",
+                        "ruleFileName": "varchar(100)"
+                    }
+                },
+                "dismissed": {
+                    "date": "datetime",
+                    "eventId": "varchar(32)",
+                    "lSourceId": "integer",
+                    "activityId": "integer",
+                    "rule": {
+                        "_id": "integer",
+                        "stageRule": "Varchar(2000)",
+                        "liveRule": "varchar(2000)",
+                        "ruleFileName": "varchar(100)"
+                    }
+                }
+            }
+        }
+    ]
+}
+
