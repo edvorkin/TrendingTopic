@@ -121,7 +121,7 @@ Thread.start {
     basicDBObject.putAll(event)
 
         collection.insert(basicDBObject)
-        Thread.sleep(200)
+        Thread.sleep(300)
     }
 }
 
